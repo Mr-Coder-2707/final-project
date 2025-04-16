@@ -113,4 +113,15 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-
+// Loading screen functionality
+document.addEventListener("DOMContentLoaded", function() {
+  setTimeout(function() {
+    var loadingScreen = document.getElementById('loading-screen');
+    if (loadingScreen) {
+      loadingScreen.style.opacity = '0';
+      setTimeout(function() {
+        loadingScreen.style.display = 'none';
+      }, 500); // This matches the transition time
+    }
+  }, 5000); // 5000 milliseconds = 5 seconds
+});
